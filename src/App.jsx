@@ -1,24 +1,17 @@
 import './App.css';
-
-const activities = [
-    'Go for a walk in the park',
-    'Visit a coffee shop',
-    'Watch a movie at home',
-    'Try a new recipe',
-    'Go to a museum',
-];
+import Header from './components/Header';
+import ActivityList from './components/ActivityList';
+import { activities } from './data/activities';
 
 function App() {
     return (
         <div className="app">
-            <h1>Weekend Activity Suggester</h1>
-            <p>Here are some possible weekend activities:</p>
+            <Header
+                title="Weekend Activity Suggester"
+                subtitle="A small React app to help you find a fun weekend idea."
+            />
 
-            <ul>
-                {activities.map((activity) => (
-                    <li key={activity}>{activity}</li>
-                ))}
-            </ul>
+            <ActivityList activities={activities} />
         </div>
     );
 }
