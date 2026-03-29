@@ -73,3 +73,24 @@
     margin-bottom: 0;
     color: #4b5563;
 }
+
+.filters {
+    margin-top: 24px;
+}
+
+.filters label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.filters select {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: white;
+}
