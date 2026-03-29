@@ -8,7 +8,7 @@ function App() {
         <div className="app">
             <Header
                 title="Weekend Activity Suggester"
-                subtitle="A small React app to help you find a fun weekend idea."
+                subtitle="A tiny React app that helps you choose what to do this weekend."
             />
 
             <ActivityList activities={activities} />

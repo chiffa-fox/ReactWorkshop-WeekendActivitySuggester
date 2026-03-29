@@ -3,12 +3,12 @@
 }
 
 .app {
-    max-width: 760px;
+    max-width: 960px;
     margin: 40px auto;
     padding: 32px;
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 .header h1 {
@@ -25,18 +25,49 @@
     margin-top: 32px;
 }
 
-.activity-list h2 {
-    margin-bottom: 12px;
+.activity-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
-.activity-list ul {
-    padding-left: 20px;
+.activity-item {
+    padding: 18px;
+    border-radius: 14px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
 }
 
-.activity-list li {
-    margin-bottom: 10px;
+.activity-top-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.activity-list span {
-    color: #6b7280;
+.activity-top-row h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.activity-emoji {
+    font-size: 24px;
+}
+
+.activity-item p {
+    margin: 12px 0;
+    color: #4b5563;
+}
+
+.activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.activity-meta span {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #e5e7eb;
+    color: #374151;
 }
