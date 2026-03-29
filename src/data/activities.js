@@ -44,4 +44,40 @@ export const activities = [
         location: 'outside',
         emoji: '🧺',
     },
+    {
+        id: 6,
+        title: "Visit a nearby park",
+        description: "Get some fresh air and a change of scenery.",
+        mood: "active",
+        time: "60",
+        location: "outside",
+        emoji: "🌳"
+    },
+    {
+        id: 7,
+        title: "Try a 10-minute home workout",
+        description: "Stretch, move, and boost your energy.",
+        mood: "active",
+        time: "15",
+        location: "inside",
+        emoji: "💪"
+    },
+    {
+        id: 8,
+        title: "Read a few pages of a book",
+        description: "A cozy and simple indoor activity.",
+        mood: "chill",
+        time: "30",
+        location: "inside",
+        emoji: "📚"
+    },
+    {
+        id: 9,
+        title: "Explore a local café",
+        description: "Go out and enjoy a new place nearby.",
+        mood: "lazy",
+        time: "60",
+        location: "outside",
+        emoji: "🧁"
+    }
 ];
