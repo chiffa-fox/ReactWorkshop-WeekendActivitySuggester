@@ -94,6 +94,11 @@
     background: #4338ca;
 }
 
+.suggestion-card button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .suggestion-placeholder {
     margin-top: 16px;
     color: #4b5563;

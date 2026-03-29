@@ -61,6 +61,7 @@ function App() {
             <SuggestionCard
                 suggestion={suggestion}
                 onSuggest={handleSuggestActivity}
+                hasMatches={filteredActivities.length > 0}
             />
 
             <ActivityList activities={filteredActivities} />

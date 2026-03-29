@@ -1,9 +1,15 @@
-function SuggestionCard({ suggestion, onSuggest }) {
+function SuggestionCard({ suggestion, onSuggest, hasMatches }) {
     return (
         <section className="suggestion-card">
-            <button onClick={onSuggest}>Suggest me something</button>
+            <button onClick={onSuggest} disabled={!hasMatches}>
+                Suggest me something
+            </button>
 
-            {suggestion ? (
+            {!hasMatches ? (
+                <p className="suggestion-placeholder">
+                    No activities match your filters right now.
+                </p>
+            ) : suggestion ? (
                 <article className="suggestion-result">
                     <div className="activity-top-row">
                         <span className="activity-emoji">{suggestion.emoji}</span>
