@@ -13,6 +13,7 @@ function Filters({ filters, onFilterChange }) {
                     >
                         <option value="all">All moods</option>
                         <option value="chill">Chill</option>
+                        <option value="active">Active</option>
                         <option value="lazy">Lazy</option>
                         <option value="curious">Curious</option>
                         <option value="creative">Creative</option>
