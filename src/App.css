@@ -124,8 +124,10 @@
 }
 
 .filters-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 16px;
 }
 
@@ -137,7 +139,7 @@
 }
 
 .filter-group select {
-    width: 100%;
+    width: 200px;
     padding: 10px 12px;
     font-size: 16px;
     border: 1px solid #d1d5db;
