@@ -7,10 +7,16 @@ import SuggestionCard from './components/SuggestionCard';
 import { activities } from './data/activities';
 
 function App() {
-    const [filters, setFilters] = useState({
-        mood: 'all',
-        time: 'all',
-        location: 'all',
+    const [filters, setFilters] = useState(() => {
+        const savedFilters = localStorage.getItem("filters");
+
+        return savedFilters
+            ? JSON.parse(savedFilters)
+            : {
+                mood: "all",
+                time: "all",
+                location: "all"
+            };
     });
 
     const [suggestion, setSuggestion] = useState(null);
@@ -46,7 +52,7 @@ function App() {
     }
 
     useEffect(() => {
-        setSuggestion(null);
+        localStorage.setItem("filters", JSON.stringify(filters));
     }, [filters]);
 
     return (
