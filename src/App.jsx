@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/Header';
 import Filters from './components/Filters';
 import ActivityList from './components/ActivityList';
-import SuggestionCard from './components/SuggestionCard';
 import { activities } from './data/activities';
 
 function App() {
@@ -18,8 +17,6 @@ function App() {
                 location: "all"
             };
     });
-
-    const [suggestion, setSuggestion] = useState(null);
 
     function handleFilterChange(name, value) {
         setFilters((prevFilters) => ({
@@ -41,16 +38,6 @@ function App() {
         return matchesMood && matchesTime && matchesLocation;
     });
 
-    function handleSuggestActivity() {
-        if (filteredActivities.length === 0) {
-            setSuggestion(null);
-            return;
-        }
-
-        const randomIndex = Math.floor(Math.random() * filteredActivities.length);
-        setSuggestion(filteredActivities[randomIndex]);
-    }
-
     useEffect(() => {
         localStorage.setItem("filters", JSON.stringify(filters));
     }, [filters]);
@@ -63,12 +50,6 @@ function App() {
             />
 
             <Filters filters={filters} onFilterChange={handleFilterChange} />
-
-            <SuggestionCard
-                suggestion={suggestion}
-                onSuggest={handleSuggestActivity}
-                hasMatches={filteredActivities.length > 0}
-            />
 
             <ActivityList activities={filteredActivities} />
         </div>
